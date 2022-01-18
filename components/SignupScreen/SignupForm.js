@@ -37,7 +37,7 @@ const SignupForm = ({navigation}) => {
         <View style={styles.wrapper}>
             <Formik 
                 initialValues={{email:'', username:'', password:''}}
-                onSubmit={(values)=>{{onSignUp(values.email, values.password, values.username)}}}
+                onSubmit={(values)=>{{onSignUp(values.email,values.username, values.password )}}}
                 validationSchema={SignupFormSchema}
                 validateOnMount={true}
             >
