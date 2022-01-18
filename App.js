@@ -1,20 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import HomeScreen from './Screens/HomeScreen';
+import LoginScreen from './Screens/LoginScreen';
+import SignUpScreen from './Screens/SignupScreen';
+import WelcomeScreen from './Screens/WelcomeScreen';
+import MapScreen from './Screens/MapScreen';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>This is the official page for trash tracjer'</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SignUpScreen/>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
