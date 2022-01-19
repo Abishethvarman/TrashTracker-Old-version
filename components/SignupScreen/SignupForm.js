@@ -15,9 +15,9 @@ const SignupFormSchema= Yup.object().shape({
 })
 
 const SignupForm = ({navigation}) => {
-    const onSignUp = (email,password) => {
-         createUserWithEmailAndPassword(auth, email, password)
-         setDoc(doc(db, 'users', auth.currentUser.uid), {
+    const onSignUp = async (email,username,password) => {
+         await createUserWithEmailAndPassword(auth, email, password)
+         await setDoc(doc(db, 'users', auth.currentUser.uid), {
             owner_uid: auth.currentUser.uid,
             username: username,
             email: email,
@@ -159,7 +159,7 @@ const SignupForm = ({navigation}) => {
 
             <View style={{flexDirection:'row', justifyContent:'flex-end', marginTop:5}}>
                     <Text style={{color:'black', fontSize:15}}>Do you already have an account</Text>
-                <TouchableOpacity onPress={()=>navigation.goBack('loginScreen')}>
+                <TouchableOpacity onPress={()=>navigation.push('LoginScreen')}>
                     <Text style={{color:'#1E90FF', fontSize:15}}> LogIn</Text>
                 </TouchableOpacity>
             </View>

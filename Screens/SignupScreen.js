@@ -4,7 +4,7 @@ import SignupForm from '../components/SignupScreen/SignupForm'
 
 
 
-const SignUpScreen = ({navigation}) => {
+const SignupScreen = ({navigation}) => {
     return (
         <View style={styles.Container}>
             <View style={styles.LogoContainer}>
@@ -34,4 +34,4 @@ const styles=StyleSheet.create({
         resizeMode: "contain",
     }
 })
-export default SignUpScreen
+export default SignupScreen
